@@ -8,12 +8,16 @@
 <title>
 	Miraç's Github Page
 </title>
-
-<body>
+<body 
+onload="welcomeFunction(); document.body.style.background='pink'", 
+onresize="document.body.style.background='lightblue'",
+onkeydown="document.body.style.background='white'",
+onkeyup="document.body.style.background='lightyellow'"
+>
 	<p>
 		<strong> Introduction to Informaiton Systems </strong>
 	</p>
-	<p class="centered">
+	<p class="centered" onmouseover="document.querySelector('.centered').style.font='bold 20pt arial,serif'">
 		<em>
 			Miraç Buğra Özkan
 			<br>
@@ -22,18 +26,20 @@
 	</p>
 	</p> Evolution of homo species </p>
 
-	<ul>
+	<ul id="unorderedL" 
+	onmouseover="document.getElementById('unorderedL').style.backgroundColor='purple'">
 		<li> Homo habilis (able man) </li>
 		<li> Homo erectus (upright man) </li>
 		<li> Homo neanderthalensis </li>
 		<li> Homo floresiensis (hobbit) </li>
 		<li> Homo sapiens (wise man) </li>
-		<ul>
+		<ul onclick="style.backgroundColor='orange'">
 			<li> Homo sapiens </li>
 		</ul>
 	</ul>
 
-	<h1>
+	<h1 onmouseover="style.color='orange', style.backgroundcolor='lightgreen'",
+		onmouseout="style.color='red', style.backgroundcolor='white'">
 		<stong> Human Evolution </strong>
 	</h1>
 	<p> <img src="evolution-diagram.png"> </p>
@@ -47,7 +53,8 @@
 	<h2> <strong> The Clickable Image </strong></h2>
 	<p> This image is clickable, click on it and try.
 		<a href="https://www.biologyonline.com/dictionary/homo-sapiens-sapiens">
-			<img src="evolution-diagram.png">
+			<img id="myImg" alt="Evolution diagram" onclick="alert(document.getElementById('myImg').alt)" 
+			src="evolution-diagram.png">
 		</a>
 	</p>
 
@@ -87,6 +94,11 @@
 				monkeys.
 </pre>
 
+	<script>
+		function welcomeFunction() {
+			alert("Welcome")
+		}
+	</script>
 </body>
 
 
